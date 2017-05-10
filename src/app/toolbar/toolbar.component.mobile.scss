@@ -1,0 +1,10 @@
+@media (max-width: 600px) and (orientation: portrait) {
+    md-toolbar {
+        .logo-title {
+            padding: 0 16px;
+        }
+        .search {
+            display: none;
+        }
+    }
+}

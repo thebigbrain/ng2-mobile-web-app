@@ -1,11 +1,38 @@
-<md-toolbar>
-  <span>First Row</span>
+<md-toolbar color="primary">
+    <button md-icon-button (click)="onClick">
+        <md-icon class="md-18|md-24|md-36|md-48">menu</md-icon>
+    </button>
+    <div class="logo-title">
+        <span>Title</span>
+    </div>
+    <div class="search-bar">
+        <form class="search" [class.focus]="searchForm.focus" #searchForm="ngForm">
+            <md-icon class="md-18|md-24|md-36|md-48">search</md-icon>
+            <input type="" name="" value="" placeholder="搜索..." (focus)="searchForm.focus = true" (blur)="searchForm.focus = false">
+        </form>
+    </div>
+    <button md-icon-button (click)="onClick">
+        <md-icon class="md-18|md-24|md-36|md-48">fullscreen</md-icon>
+    </button>
+    <button md-icon-button (click)="onClick">
+        <md-icon class="md-18|md-24|md-36|md-48">notifications</md-icon>
+    </button>
 
-  <md-toolbar-row>
-    <span>Second Row</span>
-  </md-toolbar-row>
-
-  <md-toolbar-row>
-    <span>Third Row</span>
-  </md-toolbar-row>
+    <button md-icon-button [mdMenuTriggerFor]="menuRef">
+        <md-icon class="md-18|md-24|md-36|md-48">person</md-icon>
+    </button>
+    <md-menu #menuRef="mdMenu">
+        <button md-menu-item>
+            <md-icon>dialpad</md-icon>
+            <span>Redial</span>
+        </button>
+        <button md-menu-item disabled>
+            <md-icon>voicemail</md-icon>
+            <span>Check voicemail</span>
+        </button>
+        <button md-menu-item>
+            <md-icon>notifications_off</md-icon>
+            <span>Disable alerts</span>
+        </button>
+    </md-menu>
 </md-toolbar>

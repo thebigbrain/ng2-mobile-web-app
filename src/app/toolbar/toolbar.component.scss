@@ -1,0 +1,47 @@
+@import './toolbar.component.mobile.scss';
+
+.logo-title {
+    display: flex;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin: auto 0;
+    line-height: 50px;
+    padding: 0 64px 0 16px;
+}
+.search-bar {
+    display: flex;
+    flex-grow: 1;
+}
+.search {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 12em;
+    padding: .3em .5em;
+    background: #fff;
+    color: #333;
+    border-radius: 4px;
+    transition: all ease .23s;
+    > * {
+        line-height: 24px;
+    }
+    input {
+        border: 0;
+        outline: none;
+        font-size: 14px;
+        width: 100%;
+    }
+    &.focus {
+        flex-grow: 1;
+    }
+}
+
+@media (max-width: 600px) and (orientation: portrait) {
+    // .logo-title {
+    //     padding: 0 16px;
+    // }
+    // .search {
+    //     display: none;
+    // }
+}

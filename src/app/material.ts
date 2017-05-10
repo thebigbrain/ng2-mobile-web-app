@@ -1,22 +1,21 @@
-import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {
     MdButtonModule,
+    MdInputModule,
     MdCheckboxModule,
     MdSidenavModule,
-    MdToolbarModule
+    MdToolbarModule,
+    MdIconModule,
+    MdMenuModule
 } from '@angular/material';
 
-const modules = [
+export const MaterialModules = [
     BrowserAnimationsModule,
     MdButtonModule,
+    MdInputModule,
     MdCheckboxModule,
     MdSidenavModule,
-    MdToolbarModule
+    MdToolbarModule,
+    MdIconModule,
+    MdMenuModule
 ];
-
-@NgModule({
-    imports: modules,
-    exports: modules,
-})
-export class AppMaterialModule { }
