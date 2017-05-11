@@ -1,0 +1,16 @@
+<md-sidenav-container class="app-inner" (click)="sidenav.toggle()">
+  <md-sidenav #sidenav mode="push" align="start|end" opened="true">
+    <md-nav-list class="navigation">
+      <md-list-item *ngFor="let link of links">
+        <a md-line [routerLink]="link.url">{{ link.text }}</a>
+        <button md-icon-button (click)="showInfo(link)">
+        <md-icon>info</md-icon>
+     </button>
+      </md-list-item>
+    </md-nav-list>
+  </md-sidenav>
+  <!-- Body -->
+  <div>
+    sddddddddddddddddddddddddd
+  </div>
+</md-sidenav-container>

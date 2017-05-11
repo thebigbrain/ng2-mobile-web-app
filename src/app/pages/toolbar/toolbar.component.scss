@@ -1,5 +1,3 @@
-@import './toolbar.component.mobile.scss';
-
 .logo-title {
     display: flex;
     overflow: hidden;
@@ -9,10 +7,28 @@
     line-height: 50px;
     padding: 0 64px 0 16px;
 }
+
+md-toolbar .notification-label {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 13px;
+    border-radius: 50%;
+    width: 13px;
+    height: 13px;
+    background-color: #f44336;
+    border: 4px solid #f44336;
+    color: #fff;
+    text-align: center;
+}
+
 .search-bar {
     display: flex;
     flex-grow: 1;
 }
+
 .search {
     display: flex;
     flex-direction: row;
@@ -23,7 +39,7 @@
     color: #333;
     border-radius: 4px;
     transition: all ease .23s;
-    > * {
+    >* {
         line-height: 24px;
     }
     input {
@@ -38,10 +54,12 @@
 }
 
 @media (max-width: 600px) and (orientation: portrait) {
-    // .logo-title {
-    //     padding: 0 16px;
-    // }
-    // .search {
-    //     display: none;
-    // }
+    md-toolbar {
+        .logo-title {
+            padding: 0 16px;
+        }
+        .search {
+            display: none;
+        }
+    }
 }
