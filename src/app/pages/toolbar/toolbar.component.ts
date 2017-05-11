@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
+import { ToolbarMenuService } from '../../services/toolbar-menu.service';
 
 @Component({
   selector: 'app-toolbar',
@@ -8,13 +9,18 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 export class ToolbarComponent implements OnInit {
 
 
-  constructor() { }
+  constructor(private tmService: ToolbarMenuService) { }
 
   ngOnInit() {
   }
 
   onSearchFocus($event) {
     console.log($event)
+  }
+
+  toggleMenu() {
+    console.log(this.tmService)
+    this.tmService.toggle();
   }
 
 }

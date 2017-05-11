@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ViewContainerRef } from '@angular/core';
+import { ToolbarMenuService } from '../../services/toolbar-menu.service';
+import { MdSidenav } from '@angular/material';
 
 @Component({
   selector: 'app-sidenav',
@@ -8,8 +10,17 @@ import { Component, OnInit } from '@angular/core';
 export class SidenavComponent implements OnInit {
 
   links = [];
+  isOpened = true;
 
-  constructor() { }
+  @ViewChild(MdSidenav) sideNav;
+
+  constructor(private tmService: ToolbarMenuService, private _vcr: ViewContainerRef) {
+    this.tmService.onToggle((isOpened) => {
+      this.isOpened = isOpened;
+    });
+
+    console.log(this._vcr)
+  }
 
   ngOnInit() {
     this.links.push(

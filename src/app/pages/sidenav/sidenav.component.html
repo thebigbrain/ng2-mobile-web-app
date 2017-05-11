@@ -1,5 +1,5 @@
-<md-sidenav-container class="app-inner" (click)="sidenav.toggle()">
-  <md-sidenav #sidenav mode="push" align="start|end" opened="true">
+<md-sidenav-container class="app-inner" (backdropClick)="sidenav.close()">
+  <md-sidenav #sidenav mode="push" align="start|end" [opened]="isOpened">
     <md-nav-list class="navigation">
       <md-list-item *ngFor="let link of links">
         <a md-line [routerLink]="link.url">{{ link.text }}</a>

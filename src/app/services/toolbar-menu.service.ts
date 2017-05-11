@@ -1,11 +1,26 @@
 import { Injectable } from '@angular/core';
-import { MdSidenav } from '@angular/material';
+
+let isOpened = true;
+let _callbacks = [];
 
 @Injectable()
 export class ToolbarMenuService {
 
-  static sideMenu: MdSidenav;
+  constructor() { 
+    
+  }
 
-  constructor() { }
+  toggle() {
+    isOpened = !isOpened;
+    _callbacks.forEach(cb => {
+      cb(isOpened);
+    });
+  }
+
+  onToggle(callback: any) {
+    if(callback) {
+      _callbacks.push(callback);
+    }
+  }
 
 }
