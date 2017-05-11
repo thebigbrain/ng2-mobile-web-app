@@ -19,7 +19,6 @@ export class ToolbarComponent implements OnInit {
   }
 
   toggleMenu() {
-    console.log(this.tmService)
     this.tmService.toggle();
   }
 

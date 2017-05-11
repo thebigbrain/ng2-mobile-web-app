@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
+import { MdSidenav } from '@angular/material';
 
-let isOpened = true;
-let _callbacks = [];
+let sidenav: MdSidenav;
 
 @Injectable()
 export class ToolbarMenuService {
@@ -10,17 +10,12 @@ export class ToolbarMenuService {
     
   }
 
-  toggle() {
-    isOpened = !isOpened;
-    _callbacks.forEach(cb => {
-      cb(isOpened);
-    });
+  register (sn: MdSidenav) {
+    sidenav = sn;
   }
 
-  onToggle(callback: any) {
-    if(callback) {
-      _callbacks.push(callback);
-    }
+  toggle() {
+    sidenav.toggle();
   }
 
 }

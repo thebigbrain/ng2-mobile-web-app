@@ -1,16 +1,18 @@
 <md-sidenav-container class="app-inner" (backdropClick)="sidenav.close()">
-  <md-sidenav #sidenav mode="push" align="start|end" [opened]="isOpened">
+  <md-sidenav #sidenav mode="side" align="start|end" [opened]="isOpened">
     <md-nav-list class="navigation">
-      <md-list-item *ngFor="let link of links">
-        <a md-line [routerLink]="link.url">{{ link.text }}</a>
-        <button md-icon-button (click)="showInfo(link)">
-        <md-icon>info</md-icon>
-     </button>
+      <md-list-item *ngFor="let link of links" [class.open]="selectedNav == link.url">
+        <a md-button [routerLink]="link.url" (click)="toggleNav(link)">
+          <md-icon class="md-18|md-24|md-36|md-48">{{link.icon}}</md-icon>
+          <span md-line>{{ link.text }}</span>
+          <md-icon *ngIf="link.children && link.children.length > 0" class="menu-caret">arrow_drop_down</md-icon>
+        </a>
+        <md-nav-list class="sub-menu" *ngIf="link.children  && link.children.length > 0" dense routerLinkActive="open">
+          <a md-list-item md-button *ngFor="let c of link.children" [routerLink]="c.url">{{c.text}}</a>
+        </md-nav-list>
       </md-list-item>
     </md-nav-list>
   </md-sidenav>
   <!-- Body -->
-  <div>
-    sddddddddddddddddddddddddd
-  </div>
+  <router-outlet></router-outlet>
 </md-sidenav-container>
