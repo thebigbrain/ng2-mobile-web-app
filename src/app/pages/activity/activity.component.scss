@@ -1,0 +1,17 @@
+.icon {
+    display: flex;
+    flex-direction: column;
+    width: 33.33%;
+    padding: 1.6em;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+    img {
+        width: 64px;
+    }
+    > span {
+        margin-top: 1em;
+        font-size: 14px;
+    }
+}

@@ -1,0 +1,11 @@
+<div class="app-learning">
+    <nav md-tab-nav-bar>
+        <a md-tab-link *ngFor="let tabLink of tabLinks" [routerLink]="tabLink.url" preserveFragment="true" replaceUrl="true" routerLinkActive
+            #rlaRef="routerLinkActive" [active]="rlaRef.isActive">
+        {{tabLink.label}}
+    </a>
+    </nav>
+    <div>
+        <router-outlet></router-outlet>
+    </div>
+</div>

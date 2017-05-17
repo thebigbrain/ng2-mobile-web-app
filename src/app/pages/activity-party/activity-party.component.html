@@ -1,0 +1,18 @@
+<header>
+    <div class="score">{{score}}</div>
+    <span>我的积分</span>
+    <a class="mall" md-raised-button>
+        <img src="assets/icons/mall-sm.png" alt="">
+        <span>积分商城</span>
+    </a>
+</header>
+<md-tab-group (selectChange)="onSelectChange($event)">
+    <md-tab [label]="tab" *ngFor="let tab of tabs">
+        <md-list dense>
+            <md-list-item *ngFor="let item of items">
+                {{item}}
+            </md-list-item>
+        </md-list>
+    </md-tab>
+</md-tab-group>
+<a class="footer" md-raised-button color="primary">发起活动</a>

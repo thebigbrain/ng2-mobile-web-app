@@ -1,0 +1,10 @@
+<md-list dense>
+  <md-list-item *ngFor="let message of items">
+    <img md-list-avatar [src]="message.src" [alt]="message.alt || ''">
+    <h3 md-line> {{message.title}} </h3>
+    <p md-line>
+      <span> {{message.subject}} </span>
+    </p>
+    <a routerLink="/document/learning" md-raised-button color="primary">开始学习</a>
+  </md-list-item>
+</md-list>

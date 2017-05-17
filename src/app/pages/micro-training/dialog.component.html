@@ -1,0 +1,10 @@
+<h1 md-dialog-title>留言板</h1>
+
+<md-dialog-content>
+    <textarea rows="5" cols="" [(ngModel)]="text"></textarea>
+</md-dialog-content>
+
+<md-dialog-actions align="center">
+    <button md-button md-dialog-close>取消</button>
+    <button md-button color="primary" (click)="onSure()">确定</button>
+</md-dialog-actions>

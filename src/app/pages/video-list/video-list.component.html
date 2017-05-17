@@ -1,0 +1,29 @@
+<md-card *ngFor="let item of items">
+  <md-card-header>
+    <md-card-title>{{item.title}}</md-card-title>
+    <md-card-subtitle>{{item.content}}</md-card-subtitle>
+  </md-card-header>
+  <div md-card-image>
+    <video style="width:100%;" poster="https://cdn.selz.com/plyr/1.5/View_From_A_Blue_Moon_Trailer-HD.jpg?v1" crossorigin="" class="plyr--setup">
+      <!-- Video files -->
+      <source src="https://cdn.selz.com/plyr/1.5/View_From_A_Blue_Moon_Trailer-HD.mp4" type="video/mp4">
+      <source src="https://cdn.selz.com/plyr/1.5/View_From_A_Blue_Moon_Trailer-HD.webm" type="video/webm">
+
+      <!-- Text track file -->
+      <track kind="captions" label="English" srclang="en" src="https://cdn.selz.com/plyr/1.5/View_From_A_Blue_Moon_Trailer-HD.en.vtt"
+        default="">
+
+      <!-- Fallback for browsers that don't support the <video> element -->
+      <a href="https://cdn.selz.com/plyr/1.5/View_From_A_Blue_Moon_Trailer-HD.mp4" download="">Download</a>
+    </video>
+  </div>
+  <md-card-content>
+    Text content
+  </md-card-content>
+  <md-card-actions align="start|end">
+    <a md-raised-button color="primary" [routerLink]="item.url">{{item.actionText}}</a>
+  </md-card-actions>
+  <!--<md-card-footer>
+    Footer
+  </md-card-footer>-->
+</md-card>

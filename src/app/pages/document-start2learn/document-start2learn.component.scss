@@ -1,0 +1,25 @@
+app-document-start2learn {
+    * {
+        box-sizing: border-box;
+    }
+    width: 100%;
+    height: 100%;
+    >* {
+        box-sizing: border-box;
+    }
+    md-card {
+        height: 100%;
+    }
+    .mat-card-header {
+        justify-content: center;
+        .mat-card-title {
+            font-size: 1.3em;
+            font-weight: bold;
+        }
+    }
+    md-card-footer {
+        border-top: 1px solid #ccc;
+        background: #eee;
+        padding: 1em;
+    }
+}

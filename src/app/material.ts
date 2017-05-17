@@ -6,7 +6,11 @@ import {
     MdSidenavModule,
     MdToolbarModule,
     MdIconModule,
-    MdMenuModule
+    MdMenuModule,
+    MdCardModule,
+    MdTabsModule,
+    MdListModule,
+    MdDialogModule
 } from '@angular/material';
 
 export const MaterialModules = [
@@ -17,5 +21,9 @@ export const MaterialModules = [
     MdSidenavModule,
     MdToolbarModule,
     MdIconModule,
-    MdMenuModule
+    MdMenuModule,
+    MdCardModule,
+    MdTabsModule,
+    MdListModule,
+    MdDialogModule
 ];

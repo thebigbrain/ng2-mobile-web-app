@@ -1,0 +1,17 @@
+md-list {
+    padding: .5em;
+    md-list-item {
+        border-bottom: 1px dashed #ccc;
+        .mat-line {
+            line-height: 2em;
+        }
+        .mat-line:nth-child(2) {
+            color: #aaa;
+            display: flex;
+            flex-direction: row;
+            > span:first-child {
+                flex-grow: 1;
+            }
+        }
+    }
+}

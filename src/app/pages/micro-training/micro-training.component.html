@@ -1,0 +1,15 @@
+<md-list>
+  <md-list-item *ngFor="let message of items">
+    <img md-list-avatar [src]="message.icon" [alt]="message.alt">
+    <h3 md-line> {{message.title}} </h3>
+    <p md-line>
+      <span class="brief"> {{message.content}} </span>
+    </p>
+    <md-card-actions align="start|end">
+      <a md-raised-button [routerLink]="message.url">{{message.actionText}}</a>
+    </md-card-actions>
+  </md-list-item>
+</md-list>
+<div class="footer">
+  <button md-button (click)="openDialog()">意见反馈</button>
+</div>

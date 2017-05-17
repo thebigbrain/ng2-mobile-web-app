@@ -1,0 +1,9 @@
+<md-list dense>
+  <md-list-item *ngFor="let item of items">
+    <p md-line>{{item.title}}</p>
+    <div md-line>
+      <span>学习时间：{{item.time}}</span>
+      <span>测验成绩：{{item.score}}</span>
+    </div>
+  </md-list-item>
+</md-list>

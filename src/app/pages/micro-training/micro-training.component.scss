@@ -1,0 +1,25 @@
+h3 {
+    line-height: 2;
+    font-weight: bold;
+}
+.brief {
+    color: #aaa;
+}
+.footer {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    padding: 1em;
+    text-align: center;
+    box-sizing: border-box;
+    button {
+        color:#48f;
+    }
+}
+.mat-dialog-title {
+    text-align: center;
+}
+textarea {
+    border: 1px solid #333;
+    border-radius: 4px;
+}
